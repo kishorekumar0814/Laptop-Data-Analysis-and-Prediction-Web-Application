@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Laptop Data Analysis</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="/">Home</a></li>
+                    <li><a href="/analysis">Analysis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main">
+        <div class="container">
+            <div id="result">
+                <h1>Prediction Result</h1>
+                <p>{{ result }}</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

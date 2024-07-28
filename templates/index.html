@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Data Analysis</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Laptop Data Analysis</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li class="current"><a href="/">Home</a></li>
+                    <li><a href="/analysis">Analysis</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="showcase">
+        <div class="container">
+            <h1>Welcome to Laptop Data Analysis</h1>
+            <p>Predict laptop prices, analyze customer ratings, and explore trends.</p>
+        </div>
+    </div>
+
+    <section id="main">
+        <div class="container">
+            <form action="/result" method="post">
+                <label for="rating">Customer Rating:</label>
+                <input type="text" id="rating" name="rating" required>
+                <label for="ratings">Number of Ratings:</label>
+                <input type="text" id="ratings" name="ratings" required>
+                <input type="submit" value="Predict Price">
+            </form>
+            <form action="/predict_rating" method="post">
+                <label for="price">Price:</label>
+                <input type="text" id="price" name="price" required>
+                <label for="ratings2">Number of Ratings:</label>
+                <input type="text" id="ratings2" name="ratings" required>
+                <input type="submit" value="Predict Rating">
+            </form>
+            <div class="container">
+                <h1>Search for Laptops by Brand</h1>
+                <form action="/search" method="get">
+                    <label for="brand">Brand:</label>
+                    <input type="text" id="brand" name="brand" required>
+                    <input type="submit" value="Search">
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

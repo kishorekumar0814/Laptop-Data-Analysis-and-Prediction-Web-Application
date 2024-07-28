@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .brand-name {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Search Results for Brand: {{ brand }}</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>ASIN</th>
+                    <th>Best Sellers Rank</th>
+                    <th>Date First Available</th>
+                    <th>Item Dimensions LxWxH</th>
+                    <th>Net Quantity</th>
+                    <th>Generic Name</th>
+                    <th>Number of Ratings</th>
+                    <th>Customer Rating</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for laptop in laptops %}
+                <tr>
+                    <td>{{ laptop['Name'] }}</td>
+                    <td>{{ laptop['Price'] }}</td>
+                    <td>{{ laptop['ASIN'] }}</td>
+                    <td>{{ laptop['Best Sellers Rank'] }}</td>
+                    <td>{{ laptop['Date First Available'] }}</td>
+                    <td>{{ laptop['Item Dimensions LxWxH'] }}</td>
+                    <td>{{ laptop['Net Quantity'] }}</td>
+                    <td>{{ laptop['Generic Name'] }}</td>
+                    <td>{{ laptop['Number of Ratings'] }}</td>
+                    <td>{{ laptop['Customer Rating'] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
