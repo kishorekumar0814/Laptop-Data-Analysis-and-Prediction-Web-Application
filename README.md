@@ -25,7 +25,7 @@ This project is a web application designed to analyze and predict laptop prices 
 
 ## Installation
 ### Clone the Repository
-    git clone https://github.com/yourusername/laptop-data-analysis.git
+    git clone https://github.com/kishorekumar0814/laptop-data-analysis.git
     cd laptop-data-analysis
 
 ## Set Up a Virtual Environment (Recommended)
